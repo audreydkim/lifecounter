@@ -12,12 +12,15 @@ class ViewController: UIViewController {
     // fields keeping track of player totals
     var p1_curr : Int = 20
     var p2_curr : Int = 20
+    var loser : String = "your mom"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
+    @IBOutlet weak var gameOver: UILabel!
+    
     // All for Player 1 Section
     @IBOutlet weak var player1_label: UILabel!
     
@@ -31,11 +34,18 @@ class ViewController: UIViewController {
     @IBAction func subtract5_p1(_ sender: Any) {
         p1_curr -= 5
         player1_total.text = String(p1_curr)
-        print(gameOverChecker())
+        gameOverChecker()
     }
     
-    func gameOverChecker() -> Bool {
-        return p1_curr <= 0
+    func gameOverChecker() {
+        if (p1_curr <= 0) {
+            loser = "1"
+            gameOver.text = "Player \(loser) LOSES!"
+        } else if (p2_curr <= 0) {
+            loser = "2"
+            gameOver.text = "Player \(loser) LOSES!"
+        }
+        print(p1_curr <= 0)
     }
     
     
