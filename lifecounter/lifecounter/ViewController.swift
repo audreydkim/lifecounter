@@ -30,6 +30,7 @@ class ViewController: UIViewController {
     
     // SUBTRACTING BUTTONS
     @IBAction func subtract5_p1(_ sender: Any) {
+        print("hello")
         if (p1_curr - 5 < 0) {
             p1_curr = 0
         } else {
@@ -71,6 +72,7 @@ class ViewController: UIViewController {
     
     // SUBTRACTING BUTTONS
     @IBAction func subtract5_p2(_ sender: Any) {
+        print("hello")
         if (p2_curr - 5 < 0) {
             p2_curr = 0
         } else {
@@ -88,14 +90,16 @@ class ViewController: UIViewController {
         player2_total.text = String(p2_curr)
         gameOverChecker()
     }
-    
+        
     // ADDITION BUTTONS
     @IBAction func add5_p2(_ sender: Any) {
+        print("deep breath")
         gameRestarting(player: 2)
         p2_curr += 5
         player2_total.text = String(p2_curr)
     }
     
+  
     @IBAction func add1_p2(_ sender: Any) {
         gameRestarting(player: 2)
         p2_curr += 1
