@@ -96,14 +96,13 @@ class ViewController: UIViewController {
         player2_total.text = String(p2_curr)
     }
     
-  
     @IBAction func add1_p2(_ sender: Any) {
         gameRestarting(player: 2)
         p2_curr += 1
         player2_total.text = String(p2_curr)
     }
     
-    
+    // GAME OVER OR GAME RESTART FUNCTIONS
     func gameOverChecker() {
         if (p1_curr <= 0) {
             loser = "1"
@@ -119,7 +118,5 @@ class ViewController: UIViewController {
             gameOver.text = ""
         }
     }
-    
-    
 }
 
