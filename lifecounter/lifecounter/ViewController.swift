@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     // fields keeping track of player totals
     var p1_curr : Int = 20
     var p2_curr : Int = 20
-    var loser : String = "ß"
+    var loser : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,6 @@ class ViewController: UIViewController {
     
     // SUBTRACTING BUTTONS
     @IBAction func subtract5_p1(_ sender: Any) {
-        print("hello")
         if (p1_curr - 5 < 0) {
             p1_curr = 0
         } else {
@@ -72,7 +71,6 @@ class ViewController: UIViewController {
     
     // SUBTRACTING BUTTONS
     @IBAction func subtract5_p2(_ sender: Any) {
-        print("hello")
         if (p2_curr - 5 < 0) {
             p2_curr = 0
         } else {
@@ -93,7 +91,6 @@ class ViewController: UIViewController {
         
     // ADDITION BUTTONS
     @IBAction func add5_p2(_ sender: Any) {
-        print("deep breath")
         gameRestarting(player: 2)
         p2_curr += 5
         player2_total.text = String(p2_curr)
