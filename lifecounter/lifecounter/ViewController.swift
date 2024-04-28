@@ -115,9 +115,7 @@ class ViewController: UIViewController {
     }
     
     func gameRestarting(player: Int) {
-        if (p1_curr <= 0 && player == 1) {
-            gameOver.text = ""
-        } else if (p2_curr <= 0 && player == 2) {
+        if ((p1_curr <= 0 && player == 1) && (p2_curr <= 0 && player == 2)) {
             gameOver.text = ""
         }
     }
